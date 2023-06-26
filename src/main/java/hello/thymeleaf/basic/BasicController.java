@@ -103,7 +103,13 @@ public class BasicController {
     @GetMapping("/condition")
     public String condition(Model model) {
         addUsers(model);
-        return "basic/condtion";
+        return "basic/condition";
+    }
+
+    @GetMapping("/comments")
+    public String comments(Model model) {
+        model.addAttribute("data", "Spring!");
+        return "basic/comments";
     }
 
     private void addUsers(Model model) {
